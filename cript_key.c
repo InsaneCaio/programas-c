@@ -8,7 +8,8 @@ int main(){
     int mDir[N][N] = {{1,0,0},{0,1,0},{0,0,1}};
     int mult, pivo;
 
-    // i = linha
+    // k = linha pivo
+    // i = linha alterada
     // j = coluna
 
     for (int k = 0; k < N-1; k++){                                 // k= 0
@@ -31,7 +32,6 @@ int main(){
                 mEsq[i-1][j] = (mult * mEsq[k][j]) + mEsq[i-1][j]; // mEsq[1][2]=  
                 mDir[i-1][j] = (mult * mDir[k][j]) + mDir[i-1][j]; // mDir[1][0]= 19+-3
             }
-
         }
         mostrar(mEsq, mDir);
     }
